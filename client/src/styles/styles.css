@@ -2,11 +2,18 @@
 .m-wrap {
   z-index: 2;
   position: relative;
-  background-color: rgba(0, 0, 0, 0.85);
-  width: 620px;
+  background-color: rgba(0, 0, 0, 0.95);
+  width: 640px;
   height: 380px;
   border-radius: 10px;
   overflow: hidden;
+  background: rgba(0, 0, 0, 0.9);
+  -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+          box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .m-head {
@@ -30,7 +37,7 @@
 }
 
 .m-body-options {
-  width: 220px;
+  width: 230px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -43,8 +50,8 @@
   width: 2px;
   outline: none;
   border: none;
-  height: calc(300px - 1.5rem);
-  background-color: #272727;
+  height: calc(100% - 1.5rem);
+  background-color: #252525;
   margin: 0;
   margin-left: 1.5rem;
   position: absolute;
@@ -102,16 +109,80 @@
 }
 
 .m-item .m-item-placeholder {
-  background: -webkit-gradient(linear, left top, left bottom, from(#07cac3), to(#00ffa2));
-  background: linear-gradient(180deg, #07cac3 0%, #00ffa2 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#a0bfff), to(#ddb0ff));
+  background: linear-gradient(to right, #a0bfff, #ddb0ff);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   width: 5px;
   position: absolute;
-  left: 0;
+  left: .5rem;
   top: 0;
   height: 100%;
   border-radius: 10px;
   -webkit-transition: opacity 0.35s ease;
   transition: opacity 0.35s ease;
+}
+
+.m-body-content {
+  width: calc(100% - 230px);
+  padding-right: 1.5rem;
+  padding-bottom: 1.5rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 3% 3%;
+}
+
+.m-body-content-item {
+  cursor: pointer;
+  width: 47%;
+  height: 47%;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: .5rem;
+}
+
+.m-body-content-item h3 {
+  font-weight: 500;
+  font-size: 0.75em;
+  margin-bottom: 0.25rem;
+  z-index: 1;
+}
+
+.m-body-content-item p {
+  font-size: 0.6em;
+  z-index: 1;
+  color: #767676;
+}
+
+.m-body-content-item::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(7, 7, 7, 0.9)), color-stop(50%, rgba(8, 8, 8, 0.6)), color-stop(150%, rgba(15, 15, 15, 0)));
+  background: linear-gradient(0deg, rgba(7, 7, 7, 0.9) 0%, rgba(8, 8, 8, 0.6) 50%, rgba(15, 15, 15, 0) 150%);
+  border-radius: 8px;
 }
 
 body, h1, h2, h3, h4, h5, h6, p, input, button, hr {
@@ -146,12 +217,13 @@ body, h1, h2, h3, h4, h5, h6, p, input, button, hr {
   width: inherit;
   height: inherit;
   position: absolute;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-  background: #a7ff78e8;
+  -webkit-backdrop-filter: blur(30px);
+          backdrop-filter: blur(30px);
+  background: #B993D6;
   /* fallback for old browsers */
-  background: -webkit-gradient(linear, left top, right top, from(#78ffd7e1), to(#a7ff78da));
-  background: linear-gradient(to right, #78ffd7e1, #a7ff78da);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(#8ca6db3d), to(#b993d6dc));
+  background: linear-gradient(to right, #8ca6db3d, #b993d6dc);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 /*# sourceMappingURL=styles.css.map */
