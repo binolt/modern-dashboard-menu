@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500&display=swap');
+
+@import "./menu";
+
+//default styling
+body, h1, h2, h3, h4, h5, h6, p, input, button, hr {
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    font-size: 20px;
+    color: #fff;
+}
+
+
+.app {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("https://images.unsplash.com/photo-1500817904307-e664893dcbab?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80");
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &::after {
+        z-index: 1;
+        top: 0;
+        content: "";
+        width: inherit;
+        height: inherit;
+        position: absolute;
+        backdrop-filter: blur(10px);
+        background: #a7ff78e8;  /* fallback for old browsers */
+        background: linear-gradient(to right, #78ffd7e1, #a7ff78da); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+}

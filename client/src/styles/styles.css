@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500&display=swap");
+.m-wrap {
+  z-index: 2;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.85);
+  width: 620px;
+  height: 380px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.m-head {
+  height: 72px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 1.5rem;
+}
+
+.m-head h1 {
+  font-size: 1.15em;
+  font-weight: 500;
+}
+
+.m-body {
+  height: calc(100% - 72px);
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.m-body-options {
+  width: 220px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-bottom: 1.5rem;
+}
+
+.m-body-options hr {
+  width: 2px;
+  outline: none;
+  border: none;
+  height: calc(300px - 1.5rem);
+  background-color: #272727;
+  margin: 0;
+  margin-left: 1.5rem;
+  position: absolute;
+  z-index: 2;
+}
+
+.m-body-options-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.m-body-options-head {
+  margin-left: 2.25rem;
+  font-size: .63em;
+  color: #8c8c8c !important;
+  font-weight: 300;
+}
+
+.m-body-options-head p {
+  color: #8c8c8c;
+}
+
+.m-item {
+  padding-left: 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.m-item p {
+  font-size: .76em;
+}
+
+.m-item svg {
+  width: 20px;
+  height: 20px;
+  margin-right: .5rem;
+  fill: #fff;
+  z-index: 1;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.m-item .m-item-placeholder {
+  background: -webkit-gradient(linear, left top, left bottom, from(#07cac3), to(#00ffa2));
+  background: linear-gradient(180deg, #07cac3 0%, #00ffa2 100%);
+  width: 5px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  border-radius: 10px;
+  -webkit-transition: opacity 0.35s ease;
+  transition: opacity 0.35s ease;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, input, button, hr {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  font-size: 20px;
+  color: #fff;
+}
+
+.app {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("https://images.unsplash.com/photo-1500817904307-e664893dcbab?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80");
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.app::after {
+  z-index: 1;
+  top: 0;
+  content: "";
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  background: #a7ff78e8;
+  /* fallback for old browsers */
+  background: -webkit-gradient(linear, left top, right top, from(#78ffd7e1), to(#a7ff78da));
+  background: linear-gradient(to right, #78ffd7e1, #a7ff78da);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+/*# sourceMappingURL=styles.css.map */
